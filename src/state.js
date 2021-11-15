@@ -169,7 +169,7 @@ export class state {
       transaction: false,
       wallet: false,
       block: false,
-      erklärung: false
+      tutorial: false
     };
 
     if (p) this.page[p] = true;
@@ -202,7 +202,7 @@ export class state {
     });
 
     this.socket.on('newBlock', res => {
-      if (!this.page.explanation && !this.page.erklärung) {
+      if (!this.page.explanation && !this.page.tutorial) {
         this.receivedBlock = res.block;
         this.receivedBlock.hash = this.calculateHash(res.block);
       }

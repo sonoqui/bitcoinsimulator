@@ -30,7 +30,7 @@ export class Explanation {
   attached() {
     this.state.updatePages('explanation');
     this.update();
-    this.state.l = 'eng';
+    this.state.l = 'esp';
     localStorage.german = false;
 
     MathJax.Hub.Typeset(this.ecdsa_ref);
@@ -52,19 +52,19 @@ export class Explanation {
 
   getMenu() {
     return [
-      'Why we need Bitcoin',
-      'Decentralization',
-      'Create a Bitcoin Wallet',
-      'A hard math problem',
-      'Elliptic Curves: Intro',
-      'Elliptic Curves: Key generation',
-      'Digital Signatures',
-      'Transaction storage',
-      'Building consensus',
-      'Cryptographic Hash',
-      'Building Blocks',
-      'The Blockchain',
-      'Final Words'
+      '¿Porqué Necesitamos Bitcoin?',
+      'Descentralización',
+      'Crear una Wallet de Bitcoin',
+      'Un problema matemático dificil',
+      'Curvas Elípticas: Introducción',
+      'Curvas Elípticas: Generación de Llaves',
+      'Firmas Digitales',
+      'Almacenamiento de Transacciones',
+      'Construyendo el Consenso',
+      'Hash Criptográfico',
+      'Contruyendo Bloques',
+      'El Blockchain',
+      'Conclusión'
     ];
   }
 
@@ -93,7 +93,7 @@ export class Explanation {
     localStorage.page = this.page;
 
     this.state.router.navigateToRoute(
-      'explanation',
+      'tutorial',
       { 'page': this.page },
       { trigger: true, replace: false }
     );

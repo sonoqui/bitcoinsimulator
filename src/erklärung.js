@@ -7,7 +7,7 @@ const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
 @inject(state)
-export class Erklärung {
+export class tutorial {
   constructor(state) {
     this.state = state;
 
@@ -27,14 +27,24 @@ export class Erklärung {
   }
 
   attached() {
-    this.state.updatePages('erklärung');
+    this.state.updatePages('tutorial');
     this.update();
     this.state.l = 'ger';
     localStorage.german = true;
   }
 
-  switchLanguage() {
-    this.state.router.navigate('explanation');
+  switchLanguage(l) {
+    switch (l) {
+      case "eng":
+        this.state.router.navigate('explanation');    
+        break;
+      case "ger":
+        this.state.router.navigate('erklärung');    
+        break;
+      case "esp":
+        this.state.router.navigate('tutorial');    
+        break;
+    }
   }
 
   getMenu() {
@@ -75,7 +85,7 @@ export class Erklärung {
     localStorage.page = this.page;
 
     this.state.router.navigateToRoute(
-      'erklärung',
+      'tutorial',
       { 'page': this.page },
       { trigger: true, replace: false }
     );

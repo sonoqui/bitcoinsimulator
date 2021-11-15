@@ -10,6 +10,7 @@ export class curve {
   @bindable x
   @bindable y
   @bindable eng
+  @bindable esp
 
   constructor(state) {
     this.state = state;

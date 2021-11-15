@@ -24,6 +24,7 @@ export class App {
       { route: 'blockchain', name: 'blockchain', moduleId: PLATFORM.moduleName('blockchain'), title: 'Blockchain' },
       { route: 'explanation', name: 'explanation', moduleId: PLATFORM.moduleName('explanation'), title: 'Tutorial' },
       { route: 'erklärung', name: 'erklärung', moduleId: PLATFORM.moduleName('erklärung'), title: 'Tutorial' },
+      { route: 'tutorial', name: 'tutorial', moduleId: PLATFORM.moduleName('tutorial'), title: 'Tutorial' },
       { route: '', redirect: 'blockchain' }
     ]);
     config.mapUnknownRoutes({ redirect: 'blockchain' });
@@ -31,8 +32,17 @@ export class App {
 
 
   routeTutorial() {
-    if (this.state.l == 'eng') this.state.router.navigate('explanation');
-    else this.state.router.navigate('erklärung');
+    switch (this.state.l == 'eng') {
+      case "eng":
+        this.state.router.navigate('explanation');
+        break;
+      case "esp":
+        this.state.router.navigate('tutorial');
+        break;
+      default:
+        this.state.router.navigate('erklärung');
+        break;
+    }
   }
 
   changeLanguage(l) {
@@ -43,6 +53,9 @@ export class App {
     }
     if (l == 'eng' && this.state.page.erklärung) {
       this.state.router.navigate('explanation');
+    }
+    if (l == 'esp' && this.state.page.tutorial) {
+      this.state.router.navigate('tutorial');
     }
   }
 
