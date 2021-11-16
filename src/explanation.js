@@ -31,7 +31,7 @@ export class Explanation {
     this.state.updatePages('explanation');
     this.update();
     this.state.l = 'eng';
-    localStorage.german = false;
+    localStorage.lang = 'eng';
 
     MathJax.Hub.Typeset(this.ecdsa_ref);
   }

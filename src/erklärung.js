@@ -30,7 +30,7 @@ export class tutorial {
     this.state.updatePages('tutorial');
     this.update();
     this.state.l = 'ger';
-    localStorage.german = true;
+    localStorage.lang = 'ger';
   }
 
   switchLanguage(l) {

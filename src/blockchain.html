@@ -56,13 +56,13 @@
 
                 <div>
                   <h1 class="is-size-5">
-                    <span class="has-text-weight-semibold">Block ${$parent.$index + state.depthOffset}</span>
+                    <span class="has-text-weight-semibold">Bloque ${$parent.$index + state.depthOffset}</span>
                     <span class="is-size-8">${moment(block.createdAt).format('D/M/YY HH:mm:ss')}</span>
                   </h1>
 
 
                   <h2 class="subtitle">
-                    Miner:
+                    Minero:
                     <span class="has-text-weight-semibold">${block.miner.name}</span>
                   </h2>
                 </div>
@@ -95,7 +95,7 @@
             </div>
 
             <p class="has-text-centered is-size-7" style="padding: 0.25rem; border-bottom: 1px solid lightgrey">${block.transactions.length}
-              <span show.bind="block.transactions.length === 1">Transaction</span>
+              <span show.bind="block.transactions.length === 1">Transacción</span>
               <span show.bind="block.transactions.length > 1">${state.t.block.l2[state.l]}</span>
             </p>
 
@@ -106,7 +106,7 @@
                 <tbody class="has-text-weight-semibold has-text-grey">
                   <tr repeat.for="t of block.transactions" style="padding: 0.5rem 0">
                     <td>
-                      <div show.bind="t.sender.publicKey == '0'">New</div>
+                      <div show.bind="t.sender.publicKey == '0'">Nuevo</div>
                       <div show.bind="t.sender.publicKey !== '0'">${t.sender.name}</div>
                       <div show.bind="t.sender.publicKey == '0'" class="is-size-7 has-text-weight-normal">${state.t.block.t3[state.l]}</div>
                       <div show.bind="t.sender.publicKey !== '0'" class="is-size-7 has-text-weight-normal">${t.sender.publicKey.substring(2,12)}...</div>

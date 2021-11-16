@@ -14,7 +14,7 @@
 
         <div class="is-flex " style="justify-content:space-between;">
           <div>
-            <a class="has-text-weight-semibold" route-href="route: blockchain">Bitcoin Simulator</a>
+            <a class="has-text-weight-semibold" route-href="route: blockchain">Simulador de Bitcoin</a>
             |
 
 
@@ -28,6 +28,7 @@
             </span>
           </div>
 
+          <!--
           <div>
             <a click.delegate="changeLanguage('ger')" class="${ state.l === 'ger' ? 'has-text-weight-semibold has-text-info' : ''}">de</a>
             |
@@ -35,7 +36,7 @@
             |
             <a click.delegate="changeLanguage('esp')" class="${ state.l === 'esp' ? 'has-text-weight-semibold has-text-info' : ''}">es</a>
           </div>
-
+          -->
 
         </div>
 
@@ -55,7 +56,7 @@
           <div class="column container is-flex" style="justify-content: space-between; flex-direction: column">
 
             <a class="subtitle is-size-5 link" style="margin-bottom: 0; width: fit-content" route-href="route: wallet">
-              <span class="has-text-weight-semibold"> ${state.name}</span>'s Wallet
+              <span class="has-text-weight-semibold"> Wallet de ${state.name}</span>
             </a>
 
             <div>
@@ -157,8 +158,8 @@
     <div class="is-flex has-background-white-ter has-text-centered" style="padding: 0.5rem; justify-content: center; border-bottom: 1px solid rgb(230,230,230);  ">
       <div>
         <span class="is-size-8">${state.t.app.n2[state.l]}</span>
-        <span show.bind="state.blockchain.name !== 'public'" class="has-text-weight-semibold">${state.blockchain.name}</span>
-        <span show.bind="state.blockchain.name === 'public'" class="has-text-weight-semibold">${state.t.app.n3[state.l]}</span>
+        <span show.bind="state.blockchain.name !== 'Pública'" class="has-text-weight-semibold">${state.blockchain.name}</span>
+        <span show.bind="state.blockchain.name === 'Pública'" class="has-text-weight-semibold">${state.t.app.n3[state.l]}</span>
         <span class="is-size-8">Blockchain</span>
         <a click.delegate="state.showChangeBlockchain = true" class=" is-size-7 has-text-info " style="margin-left: 0.5rem;">
           <i class="fas fa-exchange-alt"></i>
@@ -179,8 +180,8 @@
           <li class="${state.page.blockchain ? 'is-active' : ''}"><a route-href="route: blockchain">
               ${state.t.app.tab1[state.l]}
             </a></li>
-          <li class="${state.page.block ? 'is-active' : ''}"><a route-href="route: block">Block
-              Mining
+          <li class="${state.page.block ? 'is-active' : ''}"><a route-href="route: block">
+            ${state.t.app.tab2[state.l]}
             </a></li>
           <li class="${state.page.transaction ? 'is-active' : ''}"><a route-href="route: transaction">
               ${state.t.app.tab3[state.l]}
@@ -229,7 +230,46 @@
 
   <div class="is-flex is-size-7 has-text-grey box is-marginless" style=" flex-direction: column; margin-top:2rem;">
     <div>
-      Feedback or Questions?
+      <p>Esta applicación web ha sido creada con base al proyecto alojado en <a href="https://www.bitcoinsimulator.tk/">BitcoinSimulator.tk</a>
+        creado por <a href="https://twitter.com/mcsvi">@mcsvi (voluntaryway)</a> y ha sido traducida al español con el objetivo
+        de brindar una fuente de aprendizaje para todas las personas hispano hablantes que desean conocer un poco más acerca de cómo 
+        funciona Bitcoin.
+      </p>
+      <br/>
+      <p>
+        Esta página web es sin fines de lucro y está alojada en servidores personales, si deseas colaborar en mantener esta página web online
+        puedes hacerlo acá: 
+      </p>
+    </div>
+    <div class="field is-grouped is-grouped-multiline" style="margin-top:0.5rem">
+      <div class="control has-shadow">
+        <div class="tags has-addons">
+          <span class="tag is-light">
+            <i class="fas fa-bolt"></i>
+          </span>
+          <span class="tag is-white">
+            <a href="https://tippin.me/@antonio_alas" class="has-text-black" target="_blank">Tip via Lightning Network</a>
+          </span>
+        </div>  
+      </div>  
+    </div>
+    <div class="field is-grouped is-grouped-multiline" style="margin-top:0.5rem; justify-content: end;">
+      <div class="control has-shadow">
+        <div class="tags has-addons">
+          <span class="tag is-light">
+            <i class="fab fa-github"></i>
+          </span>
+          <span class="tag is-white">
+            <a href="https://github.com/sonoqui/bitcoinsimulator" target="_blank">GitHub - GNU GPL v3.0</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    <!--
+    <div style="margin-top:0.5rem">
+      ¿Preguntas y Comentarios?
     </div>
     <div>
 
@@ -310,10 +350,10 @@
 
 
   </div>
-
+  -->
 
   <div class="p-75" style="margin-bottom: 2rem; max-width: 300px;">
-    <p class="" style="margin: 0.25rem 0;">Introduction Video</p>
+    <p class="" style="margin: 0.25rem 0;">Video Introductorio (Inglés)</p>
     <div class="has-shadow" style="position:relative;
             padding-bottom:52.9%;
             height:0;

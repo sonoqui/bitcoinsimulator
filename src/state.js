@@ -19,11 +19,11 @@ export class state {
     this.updatePages('blockchain');
 
     this.t = translation;
-    if (localStorage.german) this.l = JSON.parse(localStorage.german) ? 'ger' : 'eng';
-    else this.l = 'eng';
+    if (localStorage.lang) this.l = localStorage.lang;
+    else this.l = 'esp';
 
     this.publicChainObject = {
-      name: 'public',
+      name: 'Pública',
       difficulty: 4,
       blockReward: 6.25,
       genesisReward: 6.25
@@ -33,7 +33,7 @@ export class state {
 
     if (localStorage.blockchain) {
       this.blockchain = JSON.parse(localStorage.blockchain);
-      if (this.blockchain.name == 'public') this.blockchain = this.publicChainObject;
+      if (this.blockchain.name == 'Pública') this.blockchain = this.publicChainObject;
     } else {
       this.setPublic();
     }
@@ -202,6 +202,7 @@ export class state {
     });
 
     this.socket.on('newBlock', res => {
+      console.log(res);
       if (!this.page.explanation && !this.page.tutorial) {
         this.receivedBlock = res.block;
         this.receivedBlock.hash = this.calculateHash(res.block);

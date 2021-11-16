@@ -31,9 +31,9 @@
         <tbody class="has-text-weight-semibold has-text-grey">
           <tr repeat.for="t of state.receivedBlock.transactions" style="padding: 0.5rem 0">
             <td>
-              <div show.bind="t.sender.publicKey == '0'">New</div>
+              <div show.bind="t.sender.publicKey == '0'">Nuevo</div>
               <div show.bind="t.sender.publicKey !== '0'">${t.sender.name}</div>
-              <div show.bind="t.sender.publicKey == '0'" class="is-size-7 has-text-weight-normal">Block Reward</div>
+              <div show.bind="t.sender.publicKey == '0'" class="is-size-7 has-text-weight-normal">Recompesa del Bloque</div>
               <div show.bind="t.sender.publicKey !== '0'" class="is-size-7 has-text-weight-normal">${t.sender.publicKey.substring(2,12)}...</div>
             </td>
 
@@ -59,7 +59,7 @@
       </table>
 
       <p show.bind="!state.receivedBlock.transactions.length" class="label is-small has-text-weight-normal">
-        No transactions.
+        No hay transacciones.
       </p>
 
     </div>

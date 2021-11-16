@@ -14,7 +14,7 @@ export class Explanation {
     this.menu = this.getMenu();
 
     this.transaction = {
-      sender: 'Me'
+      sender: 'Mi wallet'
     };
   }
 
@@ -28,10 +28,10 @@ export class Explanation {
   }
 
   attached() {
-    this.state.updatePages('explanation');
+    this.state.updatePages('tutorial');
     this.update();
     this.state.l = 'esp';
-    localStorage.german = false;
+    localStorage.lang = 'esp';
 
     MathJax.Hub.Typeset(this.ecdsa_ref);
   }
@@ -45,6 +45,9 @@ export class Explanation {
         this.state.router.navigate('erklärung');    
         break;
       case "esp":
+        this.state.router.navigate('tutorial');    
+        break;
+      default:
         this.state.router.navigate('tutorial');    
         break;
     }
@@ -161,7 +164,7 @@ export class Explanation {
 
   fakeTransaction() {
     this.transaction.sender = 'Alice';
-    this.transaction.receiver = 'Me';
+    this.transaction.receiver = 'Mi wallet';
     let s = '';
     for (let i = 0; i < 256; i++) {
       s += Math.round(Math.random());

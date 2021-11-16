@@ -12,7 +12,7 @@ export class Blockchain {
   async activate(params) {
     if (params.de) {
       this.state.l = 'ger';
-      localStorage.german = true;
+      localStorage.lang = 'ger';
     }
     if (!params.chain) return false;
     if (this.state.blockchain.name == params.chain) return false;

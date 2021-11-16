@@ -8,12 +8,12 @@ export default {
     n2: {
       ger: 'Verbunden mit',
       eng: 'Connected to',
-      esp: 'Connectado a'
+      esp: 'Conectado a'
     },
     n3: {
       ger: 'Öffentlicher',
       eng: 'Public',
-      esp: 'Publico'
+      esp: 'Pública'
     },
     n4: {
       ger: 'Wechseln',
@@ -75,10 +75,15 @@ export default {
       eng: 'Blockchain',
       esp: 'Blockchain'
     },
+    tab2: {
+      ger: 'Block Mining',
+      eng: 'Block Mining',
+      esp: 'Minado de Bloque'
+    },
     tab3: {
       ger: 'Neue Transaktion',
       eng: 'New Transaction',
-      eng: 'Nueva Transacción',
+      esp: 'Nueva Transacción',
     },
     l1: {
       ger: 'Lade und verifiziere Blockchain...',
@@ -245,7 +250,7 @@ export default {
     l9: {
       ger: 'Hier werden alle ausstehenden Transaktionen gesammelt, die an dich übermittelt wurden. Prüfe für jede Transaktion ob die Signatur gültig ist. Anschließend kannst du die Transaktionen deinem Block hinzufügen und anfangen zu minen.',
       eng: 'All pending transactions in the network are collected here. Before adding a transaction to your block, check if the signature is valid and whether the sender has enough Bitcoin to spend. ',
-      esp: 'Todas las transacciones en la red son detalladas aquí. Antes de agregar una transacción a tu bloque, revisa si la firma digital es válida y sí el remitente realmente tiene suficiente Bitcoin para gastar.'
+      esp: 'Todas las transacciones sin confirmar en la red son detalladas aquí. Antes de agregar una transacción a tu bloque, revisa si la firma digital es válida y sí el remitente realmente tiene suficiente Bitcoin para gastar.'
     },
     l10: {
       ger: 'Der Mempool ist derzeit leer. Sobald es neue Transaktionen gibt erscheinen sie hier.',
@@ -260,7 +265,7 @@ export default {
     l12: {
       ger: 'Gültig',
       eng: 'Valid',
-      esp: 'Valida'
+      esp: 'Válida'
     },
     l13: {
       ger: 'Ungültige Signatur',
@@ -400,7 +405,7 @@ export default {
     l5: {
       ger: 'Eine Blockchain mit diesem Namen existiert nicht.',
       eng: "A Blockchain with this name doesn't exist.",
-      esp: "Un Blochain con este nombre ya existe."
+      esp: "Un Blockchain con este nombre ya existe."
     },
     l6: {
       ger: 'Hier kannst du die Mining Schwierigkeit für deine Blockchain festlegen. Jede zusätzlich Null erhöht den Aufwand um das 16-fache. (Richtwerte: 1 Computer: 2 Nullen, 5 Computer : 3 Nullen, 20 Computer : 4 Nullen)',
@@ -463,7 +468,7 @@ export default {
     l1: {
       ger: 'Es existiert noch keine Blockchain.',
       eng: 'No Blockchain does yet exist.',
-      esp: 'No existe ningún Blockchain aún.'
+      esp: 'No existe ningún bloque aún.'
     },
     l2: {
       ger: 'Mining auf Basis dieses Blocks',
@@ -518,7 +523,7 @@ export default {
     l12: {
       ger: 'Blöcke gekürzt',
       eng: 'more Blocks',
-      esp: 'más Bloques'
+      esp: 'Más Bloques'
     },
     l13: {
       ger: `Die gesamte Blockchain sollte lokal auf deinem Computer gemäß den Bitcoin Konsensregeln überprüft werden. Jedoch ist dieser Verifikationsprozess für lange Ketten sehr rechenaufwändig. 

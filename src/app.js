@@ -39,22 +39,25 @@ export class App {
       case "esp":
         this.state.router.navigate('tutorial');
         break;
-      default:
+      case "ger":
         this.state.router.navigate('erklärung');
+        break;
+      default:
+        this.state.router.navigate('tutorial');
         break;
     }
   }
 
   changeLanguage(l) {
     this.state.l = l;
-    localStorage.german = l == 'ger';
-    if (l == 'ger' && this.state.page.explanation) {
+    localStorage.lang = l;
+    if (l == 'ger' && (this.state.page.explanation || this.state.page.tutorial)) {
       this.state.router.navigate('erklärung');
     }
-    if (l == 'eng' && this.state.page.erklärung) {
+    if (l == 'eng' && (this.state.page.explanation || this.state.page.tutorial)) {
       this.state.router.navigate('explanation');
     }
-    if (l == 'esp' && this.state.page.tutorial) {
+    if (l == 'esp' && (this.state.page.explanation || this.state.page.tutorial)) {
       this.state.router.navigate('tutorial');
     }
   }
