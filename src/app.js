@@ -14,7 +14,7 @@ export class App {
   }
 
   configureRouter(config) {
-    config.title = 'Bitcoin Simulator';
+    config.title = 'Simulador de Bitcoin';
     config.options.pushState = true;
     config.options.root = '/';
     config.map([
